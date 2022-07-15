@@ -9,3 +9,6 @@
   * [maine_ed](maine_ed)
 * EDA: one or more figures sufficient to assess project feasibility
 * Project plan (plan.md): milestones/timeline/roles and responsibilities
+
+## Checklist
+EDA and Project plan (plan.md)
