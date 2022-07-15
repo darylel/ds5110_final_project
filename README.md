@@ -11,4 +11,5 @@
 * Project plan (plan.md): milestones/timeline/roles and responsibilities
 
 ## Checklist
-EDA and Project plan (plan.md)
+* EDA: one or more figures sufficient to assess project feasibility
+* Project plan (plan.md): milestones/timeline/roles and responsibilities
