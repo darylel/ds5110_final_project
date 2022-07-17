@@ -15,6 +15,8 @@
 
 ![fig1](/figs/Figure_1.png)
 
-* Project plan (plan.md): milestones/timeline/roles and responsibilities
+*description*
 
-[Project plan](https://github.com/darylel/ds5110_final_project/blob/james/plan.md)
+Simple plot of frequency of 5 most occurring words in each text file.
+
+* Project plan ([plan.md](https://github.com/darylel/ds5110_final_project/blob/james/plan.md)): milestones/timeline/roles and responsibilities
