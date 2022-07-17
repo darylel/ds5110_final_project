@@ -11,7 +11,7 @@ def read_file(doc):
     Read a file
     '''
     # Read file
-    with open('./Maine_Ed_2050/' + doc) as f:
+    with open('./Maine_Ed_2050/' + doc, encoding="utf-8") as f:
         lines = f.readlines()
 
     return lines
@@ -85,6 +85,29 @@ def reformat_text(lines):
 
     return x
 
+def sub(txts, title):
+    total_lines = []
+    for text in txts:
+        lines = read_file(text)
+        total_lines = total_lines + reformat_text(lines)
+
+    word_list = create_preprocess(total_lines)
+
+    vocabulary = unique_list(word_list)
+
+    frequency = freq(vocabulary, word_list)
+
+    df = pd.DataFrame.from_dict({'word': frequency.keys(), 'frequency': frequency.values()})
+    # print(df.head())
+
+    # print(df.sort_values('frequency', ascending=False).head(50))
+
+    # t = time.time()
+    # # Write word frequencies to file
+    # df.sort_values('frequency', ascending=False).to_csv('file_' + title + '.csv', sep=',')
+    
+
+
 def main():
     '''
     Main function
@@ -95,59 +118,15 @@ def main():
     presque_isle = ['University_of_Maine_Presque_Isle_Pre-Service_Teachers_2.txt', 'University_of_Maine_Presque_Isle_Pre-Service_Teachers_1.txt']
     community = ['Community_Caring_Collaborative_1.txt', 'Community_Caring_Collaborative_2.txt']
 
-    
-    #lines = read_file(educate[0])
+    txtss = [educate, farmers, kennebec, presque_isle, community]
+    #lines = read_file(text)
     #lines = reformat_text(lines)
 
     #print(lines)
 
-    total_lines = []
-    for text in educate:
-        lines = read_file(educate[0])
-        total_lines = total_lines + reformat_text(lines)
-
-    print(len(total_lines))
-
-    for text in farmers:
-        lines = read_file(educate[0])
-        total_lines = total_lines + reformat_text(lines)
-
-    print(len(total_lines))
-
-    for text in kennebec:
-        lines = read_file(educate[0])
-        total_lines = total_lines + reformat_text(lines)
-
-    print(len(total_lines))
-
-    for text in presque_isle:
-        lines = read_file(educate[0])
-        total_lines = total_lines + reformat_text(lines)
-
-    print(len(total_lines))
-
-    for text in community:
-        lines = read_file(educate[0])
-        total_lines = total_lines + reformat_text(lines)
-
-    print(len(total_lines))
-
-    word_list = create_preprocess(total_lines)
-
-    print(len(word_list))
-
-    vocabulary = unique_list(word_list)
-
-    frequency = freq(vocabulary, word_list)
-
-    df = pd.DataFrame.from_dict({'word': frequency.keys(), 'frequency': frequency.values()})
-    print(df.head())
-
-    print(df.sort_values('frequency', ascending=False).head(50))
-
-    t = time.time()
-    # Write word frequencies to file
-    df.sort_values('frequency', ascending=False).to_csv('file_' + str(t) + '.csv', sep=',')
+    
+    for txts, title in zip(txtss, ["educate", "farmers", "kennebec", "presque_isle", "community"]):
+        sub(txts, title)
 
 if __name__ == '__main__':
     main()
