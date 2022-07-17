@@ -11,12 +11,12 @@
 * Project plan (plan.md): milestones/timeline/roles and responsibilities
 
 ## Checklist
-* EDA: one or more figures sufficient to assess project feasibility
+### EDA: one or more figures sufficient to assess project feasibility
 
 ![fig1](/figs/Figure_1.png)
 
-*description*
+#### Description
 
-Simple plot of frequency of 5 most occurring words in each text file.
+Simple bar chart of frequency of 5 most occurring words in each text file.
 
-* Project plan ([plan.md](https://github.com/darylel/ds5110_final_project/blob/james/plan.md)): milestones/timeline/roles and responsibilities
+### Project plan ([plan.md](https://github.com/darylel/ds5110_final_project/blob/james/plan.md)): milestones/timeline/roles and responsibilities
