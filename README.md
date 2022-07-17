@@ -12,4 +12,7 @@
 
 ## Checklist
 * EDA: one or more figures sufficient to assess project feasibility
+![fig1](/figs/Figure_1.png)
+
 * Project plan (plan.md): milestones/timeline/roles and responsibilities
+[Project plan](https://github.com/darylel/ds5110_final_project/blob/james/plan.md)
