@@ -1,0 +1,11 @@
+Check-In:
+  July 25th (Monday)
+
+Big-Plan:
+  1. Preprocess (feature modification, lemmatization, stopwords and etc.)
+  2. Analyze (Tf, tfidf, and etc.)
+  3. Plot (map, wordcloud and etc.)
+
+To Do:
+  Daryle: Preprocess
+  James: Analyze and Visualization
